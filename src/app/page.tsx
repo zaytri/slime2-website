@@ -42,7 +42,7 @@ export default function Home() {
         {links.map(([name, path]) => {
           return (
             <Button key={name} className='px-4 pb-4 pt-3' href={path}>
-              <ButtonText className='font-mochiy text-2xl font-normal'>
+              <ButtonText className='font-mochiy text-2xl !font-normal'>
                 {name}
               </ButtonText>
             </Button>
