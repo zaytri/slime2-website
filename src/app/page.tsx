@@ -1,43 +1,54 @@
-import Button, { ButtonText } from '@/components/button'
-import prisma from '@/helpers/database'
+'use client'
 
-export const revalidate = 300 // revalidate the data at most every 5 minutes
+import Button, { ButtonText } from '@/components/button'
 
 const links = [
-  [
-    'Widget Gallery',
-    'https://forums.slime2.stream/resources/categories/widgets.2/',
-  ],
-  ['Widget Setup', 'https://forums.slime2.stream/resources/widget-setup.3/'],
-  ['Widget Dev Docs', 'https://docs.slime2.stream/'],
-  ['Community Forums', 'https://forums.slime2.stream/'],
-  [
-    'What is slime2?',
-    'https://forums.slime2.stream/threads/what-is-slime2.36/',
-  ],
-  ['GitHub Code', 'https://github.com/zaytri/slime2'],
+  // ['Download Slime2', 'https://zaytri.itch.io/slime2'],
+  // ['Widget Setup', 'https://forums.slime2.stream/resources/widget-setup.3/'],
+  // ['Widget Dev Docs', 'https://docs.slime2.stream/'],
+  ['Forums', 'https://slime2.forumotion.com/'],
+  ['Discord', 'https://discord.gg/NcZvztE9dc'],
+  ['Custom Widgets', 'https://slime2.forumotion.com/c3-custom-widgets'],
+  ['Source Code', 'https://github.com/zaytri/slime2-desktop'],
+
+  // [
+  //   'What is slime2?',
+  //   'https://forums.slime2.stream/threads/what-is-slime2.36/',
+  // ],
 ]
 
-export default async function Home() {
-  const userCount = await prisma.user.count()
-
+export default function Home() {
   return (
-    <div className='space-y-5 text-center font-round'>
-      <h1 className='text-3xl font-medium'>Welcome to slime2!</h1>
-      <p className='!mt-2'>
-        A service for Twitch chat widgets that run locally on your computer!
+    <div className='space-y-5 rounded-[8px] border border-zinc-500 bg-gradient-to-b from-zinc-800/90 to-zinc-900/90 px-8 py-8 text-center font-round text-white shadow-[inset_0_5px_15px_5px_#0002] ring-2 ring-zinc-900/50 [text-shadow:0_2px_black]'>
+      <h1 className='font-mochiy text-2xl font-medium'>
+        Slime2<span className='text-xl'> - Your streams, your way!</span>
+      </h1>
+
+      <p className='!mt-4 max-w-xl text-left font-fredoka text-lg'>
+        Slime2 is a desktop app for managing and customizing local overlays and
+        bots for your streams, available on Linux, Windows, and macOS!
       </p>
-      <p className='text-xl'>
-        Used by <strong className='text-2xl font-medium'>{userCount}</strong>{' '}
-        streamers!
-      </p>
-      {links.map(([name, path]) => {
-        return (
-          <Button key={name} className='px-5 pb-3 pt-5' href={path}>
-            <ButtonText className='text-3xl'>{name}</ButtonText>
-          </Button>
-        )
-      })}
+      <div className='flex justify-center'>
+        <iframe
+          src='https://itch.io/embed/3567176?linkback=true&amp;border_width=4&amp;bg_color=f1fee0&amp;fg_color=222222&amp;link_color=327345&amp;border_color=529365'
+          width='100%'
+          height='173'
+          className='max-w-[558px]'
+        >
+          <a href='https://zaytri.itch.io/slime2'>Slime2 by Zaytri</a>
+        </iframe>
+      </div>
+      <div className='grid grid-cols-2 gap-4'>
+        {links.map(([name, path]) => {
+          return (
+            <Button key={name} className='px-4 pb-4 pt-3' href={path}>
+              <ButtonText className='font-mochiy text-2xl font-normal'>
+                {name}
+              </ButtonText>
+            </Button>
+          )
+        })}
+      </div>
     </div>
   )
 }

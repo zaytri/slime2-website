@@ -3,6 +3,8 @@ import {
   Fredoka,
   Finlandica,
   Grandstander,
+  Nunito,
+  Mochiy_Pop_One,
 } from 'next/font/google'
 
 const radioCanada = Radio_Canada({
@@ -29,7 +31,27 @@ const grandstander = Grandstander({
   display: 'swap',
 })
 
-const fontClasses = [radioCanada, fredoka, finlandica, grandstander]
+const mochiy = Mochiy_Pop_One({
+  subsets: ['latin'],
+  variable: '--font-mochiy',
+  display: 'swap',
+  weight: '400',
+})
+
+const nunito = Nunito({
+  subsets: ['latin'],
+  variable: '--font-nunito',
+  display: 'swap',
+})
+
+const fontClasses = [
+  radioCanada,
+  fredoka,
+  finlandica,
+  grandstander,
+  mochiy,
+  nunito,
+]
   .map(font => font.variable)
   .join(' ')
 

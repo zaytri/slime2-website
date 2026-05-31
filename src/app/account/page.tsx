@@ -13,7 +13,7 @@ const sessionStateKey = 'slime2-oauth-state'
 
 const links: LoginLink[] = [
   { provider: 'twitch', text: 'Twitch', icon: 'assets/twitch-logo.svg' },
-  { provider: 'google', text: 'YouTube', icon: 'assets/youtube-logo.svg' },
+  // { provider: 'google', text: 'YouTube', icon: 'assets/youtube-logo.svg' },
 ]
 
 type LoginLink = {
@@ -136,19 +136,33 @@ export default function Account() {
       <h1 className='text-center font-round text-3xl font-medium'>
         Account Login
       </h1>
-      <p className='!mt-2 text-center'>
+
+      <p className='mt-5 rounded-lg border-2 border-amber-800 bg-amber-100 px-5 py-3 text-black [text-shadow:none]'>
+        <strong className='text-lg font-medium'>
+          ⚠️ Notice: Account login will be removed in the future.
+        </strong>
+        <br />
+        <br />
+        <div className='!text-left font-nunito'>
+          The Slime2 desktop app is replacing Slime2 legacy, and handles all
+          authentication locally. For those still using Slime2 legacy widgets,
+          account login will continue to be here until all of the legacy widgets
+          have been ported to Slime2 desktop widgets.
+        </div>
+      </p>
+      {/* <p className='!mt-2 text-center'>
         By logging in, you agree to the{' '}
-        <a className=' text-green-700 underline' href='/privacy'>
+        <a className=' text-green-300 underline' href='/privacy'>
           Privacy Policy
         </a>{' '}
         and{' '}
-        <a className='text-green-700 underline' href='/tos'>
+        <a className='text-green-300 underline' href='/tos'>
           Terms of Service
         </a>
         .
-      </p>
+      </p> */}
       {info && (
-        <p className='rounded-lg border-2 border-rose-800 bg-rose-100 px-5 py-3 text-center text-lg'>
+        <p className='rounded-lg border-2 border-rose-800 bg-rose-100 px-5 py-3 text-center text-lg text-black [text-shadow:none]'>
           {info}
         </p>
       )}
@@ -175,15 +189,6 @@ export default function Account() {
           </div>
         )
       })}
-      <p className='mt-5 rounded-lg border-2 border-amber-800 bg-amber-100 px-5 py-3'>
-        <strong className='font-semibold'>
-          ⚠️ YouTube support is still in development!
-        </strong>
-        <br />
-        <br />
-        The login button here is just for dev testing purposes.
-      </p>
-      {/* <TwitchPermissions /> */}
     </div>
   )
 }

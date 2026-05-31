@@ -1,6 +1,6 @@
 {
   "name": "slime2-website",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "npm run env-pull && next dev",

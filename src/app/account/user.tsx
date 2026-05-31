@@ -178,8 +178,8 @@ export default function User({
             <ButtonText>Download New Key</ButtonText>
           </Button>
 
-          <p className='mt-5 rounded-lg border-2 border-amber-800 bg-amber-100 px-5 py-3'>
-            <strong className='font-semibold'>
+          <p className='mt-5 rounded-lg border-2 border-amber-800 bg-amber-100 px-5 py-3 text-black [text-shadow:none]'>
+            <strong className='font-medium'>
               ⚠️ Downloading a new key will expire all previous keys.
             </strong>
             <br />

@@ -4,16 +4,24 @@ export default function Footer() {
   return (
     <footer className='mt-5 w-screen bg-emerald-800 p-3 text-center text-lime-100'>
       <p>
-        slime2 created by{' '}
+        Slime2 created by{' '}
         <Link
           href='https://zaytri.com/'
           className='text-lime-300 hover:underline'
           target='_blank'
         >
           Zaytri
+        </Link>{' '}
+        | Logo designed by{' '}
+        <Link
+          href='https://sidequestdesigns.com/'
+          className='text-lime-300 hover:underline'
+          target='_blank'
+        >
+          Bri @ SideQuest Designs
         </Link>
       </p>
-      <p>
+      {/* <p>
         <Link href='/privacy' className='text-lime-300 hover:underline'>
           Privacy Policy
         </Link>{' '}
@@ -21,7 +29,7 @@ export default function Footer() {
         <Link href='/tos' className='text-lime-300 hover:underline'>
           Terms of Service
         </Link>
-      </p>
+      </p> */}
     </footer>
   )
 }
