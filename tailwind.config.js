@@ -18,6 +18,7 @@ module.exports = {
         fredoka: ['var(--font-fredoka)', ...fontFamily.sans],
         nunito: ['var(--font-nunito)', ...fontFamily.sans],
         mochiy: ['var(--font-mochiy)', ...fontFamily.sans],
+        atkinson: ['var(--font-atkinson)', ...fontFamily.sans],
       },
     },
   },

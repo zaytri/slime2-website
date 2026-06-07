@@ -5,6 +5,7 @@ import {
   Grandstander,
   Nunito,
   Mochiy_Pop_One,
+  Atkinson_Hyperlegible,
 } from 'next/font/google'
 
 const radioCanada = Radio_Canada({
@@ -44,6 +45,13 @@ const nunito = Nunito({
   display: 'swap',
 })
 
+const atkinson = Atkinson_Hyperlegible({
+  subsets: ['latin'],
+  variable: '--font-atkinson',
+  display: 'swap',
+  weight: '400',
+})
+
 const fontClasses = [
   radioCanada,
   fredoka,
@@ -51,6 +59,7 @@ const fontClasses = [
   grandstander,
   mochiy,
   nunito,
+  atkinson,
 ]
   .map(font => font.variable)
   .join(' ')

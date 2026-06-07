@@ -24,7 +24,7 @@ export default function Home() {
         Slime2<span className='text-xl'> - Your streams, your way!</span>
       </h1>
 
-      <p className='!mt-4 max-w-xl text-left font-fredoka text-lg'>
+      <p className='!mt-4 max-w-xl text-left font-atkinson text-lg'>
         Slime2 is a desktop app for managing and customizing local overlays and
         bots for your streams, available on Linux, Windows, and macOS!
       </p>

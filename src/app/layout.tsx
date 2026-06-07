@@ -9,7 +9,7 @@ import WaveSvg from '@/components/svg/WaveSvg'
 export const metadata = {
   title: 'Slime2 - Your streams, your way!',
   description:
-    'Slime2 - A desktop app to manage and customize local overlays and bots for your streams, available on Linux, Windows, and Mac!',
+    'Slime2 - A desktop app to manage and customize local overlays and bots for your streams, available on Linux, Windows, and macOS!',
   icons: {
     icon: [
       { url: '/app-icon/favicon-16x16.png', sizes: '16x16' },
